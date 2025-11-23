@@ -1,137 +1,59 @@
-# Murf AI Voice Agents Challenge 2025 - Day 1
+🎙️ 10 Days of AI Voice Agents Challenge (Murf AI)
 
-## 🎙️ What This Is
-A real-time conversational voice agent that listens, thinks, and responds instantly. Built for **Murf AI's 10 Days of Voice Agents Challenge 2025** using the new **Murf Falcon** TTS model.
+This repository tracks my progress through the Murf AI Voice Agents Challenge 2025. The goal is to build a fully functional, low-latency, conversational AI agent using modern tools and the Murf Falcon TTS API over 10 days.
 
-Not a chatbot—an actual voice pipeline with ultra-low latency (130ms response time).
+⚡ Core Technology Stack
 
-> **Credit:** Based on the official [Murf AI starter kit](https://github.com/murf-ai/ten-days-of-voice-agents-2025). 
-  I configured, debugged, and deployed it locally for Day 1.
+The entire project is built on a real-time, low-latency stack:
 
----
+TTS (Voice): Murf Falcon
 
-## ⚡ The Stack
+STT (Ears): Deepgram
 
-**Real-time Audio Pipeline:**
-- **STT (Ear):** Deepgram – converts speech to text
-- **LLM (Brain):** Google Gemini Flash – processes and generates responses
-- **TTS (Voice):** Murf Falcon – streams audio back instantly
-- **Orchestration:** LiveKit – handles WebSocket connections for real-time streaming
+LLM (Brain): Google Gemini Flash
 
-**Architecture:**
-- **Backend:** Python (LiveKit Agents)
-- **Frontend:** Next.js + TypeScript
+Orchestration: LiveKit Agents (Python)
 
----
+🎯 Progress
 
-## 🚀 Setup
+Day
 
-### Prerequisites
-- Python 3.10+
-- Node.js 18+
-- API Keys: Murf AI, LiveKit Cloud, Deepgram, Google Gemini
+Goal
 
----
+Status
 
-### 1. Clone the Repo
-```bash
-git clone <YOUR_REPO_URL>
-cd ten-days-of-voice-agents-2025
-```
+Key Achievement
 
----
+Day 1
 
-### 2. Backend Setup
-```bash
-cd backend
-pip install -r requirements.txt
-```
+Get the starter agent running end-to-end.
 
-**Create `.env` file:**
-```bash
-LIVEKIT_URL=wss://your-project.livekit.cloud
-LIVEKIT_API_KEY=your_api_key
-LIVEKIT_API_SECRET=your_api_secret
-MURF_API_KEY=your_murf_key
-DEEPGRAM_API_KEY=your_deepgram_key
-GOOGLE_API_KEY=your_google_key
-```
+✅ COMPLETE
 
-**Download models & start:**
-```bash
-# First time only
-python src/agent.py download-files
+Established the foundational voice pipeline (STT → LLM → TTS).
 
-# Run the agent
-python src/agent.py dev
-```
+Day 2
 
----
+Create a functional Coffee Shop Barista Agent.
 
-### 3. Frontend Setup
+✅ COMPLETE
 
-Open a new terminal:
-```bash
-cd frontend
-npm install
-```
+Implemented Function Calling and State Management to track and validate a structured order (Drink, Size, Milk, Name).
 
-**Create `.env.local` file:**
-```bash
-LIVEKIT_URL=wss://your-project.livekit.cloud
-LIVEKIT_API_KEY=your_api_key
-LIVEKIT_API_SECRET=your_api_secret
-```
+Day 3
 
-**Start the frontend:**
-```bash
-npm run dev
-```
+[To be continued]
 
----
+⏳ Pending
 
-## 🎮 Run It
+[e.g., Add Chat History, Implement Streaming]
 
-1. Make sure both backend (`agent.py`) and frontend (`npm run dev`) are running
-2. Open `http://localhost:3000` in your browser
-3. Click **Connect**
-4. Start talking to test the voice agent
+...
 
----
 
-## 🐛 Common Issues
 
-**"Environment variable not found"**
-- Double-check your `.env` and `.env.local` files
-- Make sure variable names match exactly
 
-**Audio not streaming**
-- Verify LiveKit credentials are correct in both backend and frontend
-- Check browser console for WebSocket errors
 
-**Missing dependencies**
-- Run `python src/agent.py download-files` if models aren't loading
 
----
 
-## 📚 What I Learned
-
-- Setting up real-time audio pipelines is harder than it looks
-- Environment variable management across frontend/backend is crucial
-- Murf Falcon is genuinely fast compared to traditional TTS APIs
-- WebSocket orchestration makes or breaks the user experience
-
----
-
-## 🔗 Links
-
-- [Murf AI Challenge Repo](https://github.com/murf-ai/ten-days-of-voice-agents-2025)
-- [Day 1 Task Details](https://github.com/murf-ai/ten-days-of-voice-agents-2025/blob/main/challenges/Day%201%20Task.md)
-
----
-
-## 📜 License
-
-Built as part of the Murf AI Voice Agents Challenge. Uses code from the official Murf AI repository.
-
-#BuildwithMurf #10DaysOfVoiceAgents
+See the backend/src/agent.py file for the current agent logic, and the Day 2 README for technical details on function calling.
