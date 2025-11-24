@@ -25,7 +25,59 @@ This is a **daily health & wellness voice companion** that:
 5. **Daily Goals** - "What 1-3 things would you like to accomplish?"
 6. **Supportive Advice** - Simple, grounded suggestions (walks, breaks, task breakdown)
 7. **Recap & Confirm** - Summarizes session and confirms accuracy
-8. **Save** - Stores data to `wellness_log.json`
+8. **Todoist Integration** (Optional) - Offers to create tasks in Todoist
+9. **Save** - Stores data to `wellness_log.json`
+
+### 📋 Todoist Integration (MCP)
+
+**NEW!** The agent can now create tasks in Todoist from your daily objectives.
+
+**How it works:**
+- After stating your goals, agent asks: *"Would you like me to add these to Todoist so you can track them?"*
+- If you agree, tasks are created automatically in your Todoist inbox
+- Agent confirms: *"I've created 3 tasks in Todoist"*
+
+**Setup (Optional):**
+1. Create free account at https://todoist.com
+2. Get API token from https://todoist.com/app/settings/integrations/developer
+3. Add to `backend/.env`:
+   ```
+   TODOIST_API_KEY=your_api_token_here
+   ```
+4. Restart the agent
+
+**Note:** Todoist integration is completely optional. The agent works perfectly fine without it!
+
+### 📈 Weekly Reflection & Analytics
+
+**NEW!** The agent can now analyze your wellness history and provide insights.
+
+**Ask questions like:**
+- "How has my mood been this week?"
+- "Did I follow through on my goals?"
+- "Show me my weekly summary"
+- "How am I doing?"
+
+**What you get:**
+- 📊 Average mood score over the past 7 days
+- ⚡ Average energy level trends
+- 🎯 Goal-setting consistency metrics
+- 💙 Supportive, non-judgmental summaries
+
+**Example:**
+```
+📊 Mood: Averaging 7.2/10 - pretty good overall
+⚡ Energy: Averaging 6.0/10 - moderate energy
+🎯 Goals: Set objectives on 6 out of 7 days (excellent consistency)
+
+You're doing well! Keep up the positive momentum. 😊
+```
+
+**Requirements:**
+- At least 3 check-ins to get meaningful insights
+- Works best when you use numeric scales (e.g., "7/10" for mood)
+
+See [WEEKLY_REFLECTION.md](WEEKLY_REFLECTION.md) for detailed guide.
 
 ### Data Persistence
 

@@ -1,0 +1,61 @@
+{
+    "entries": [
+        {
+            "timestamp": "2025-11-18T09:30:00",
+            "date": "2025-11-18 09:30",
+            "mood": "feeling okay, about 6/10",
+            "energy_level": "5/10",
+            "daily_objectives": [
+                "finish project proposal",
+                "go for a walk"
+            ],
+            "agent_summary": "User reported moderate mood and energy. Two work-related and self-care goals."
+        },
+        {
+            "timestamp": "2025-11-19T10:15:00",
+            "date": "2025-11-19 10:15",
+            "mood": "pretty good, 7/10",
+            "energy_level": "7/10",
+            "daily_objectives": [
+                "team meeting prep",
+                "workout session",
+                "call mom"
+            ],
+            "agent_summary": "User feeling better with good energy. Three balanced objectives."
+        },
+        {
+            "timestamp": "2025-11-20T08:45:00",
+            "date": "2025-11-20 08:45",
+            "mood": "8/10, feeling great",
+            "energy_level": "8/10",
+            "daily_objectives": [
+                "complete coding task",
+                "meditation"
+            ],
+            "agent_summary": "User in great mood with high energy. Two objectives focused on work and mindfulness."
+        },
+        {
+            "timestamp": "2025-11-21T09:00:00",
+            "date": "2025-11-21 09:00",
+            "mood": "5/10, a bit tired",
+            "energy_level": "4/10",
+            "daily_objectives": [
+                "catch up on emails",
+                "early bedtime"
+            ],
+            "agent_summary": "User feeling tired with lower energy. Planning lighter day with self-care."
+        },
+        {
+            "timestamp": "2025-11-22T10:30:00",
+            "date": "2025-11-22 10:30",
+            "mood": "7/10",
+            "energy_level": "6/10",
+            "daily_objectives": [
+                "client presentation",
+                "grocery shopping",
+                "read for 30 min"
+            ],
+            "agent_summary": "User mood improved. Three well-rounded objectives."
+        }
+    ]
+}
