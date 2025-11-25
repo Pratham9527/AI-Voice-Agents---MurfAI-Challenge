@@ -1,0 +1,43 @@
+{
+  "sessions": [
+    {
+      "timestamp": "2025-11-25T18:55:50.240504",
+      "concept_id": "variables",
+      "mode": "learn"
+    },
+    {
+      "timestamp": "2025-11-25T18:57:22.437980",
+      "concept_id": "variables",
+      "mode": "quiz"
+    },
+    {
+      "timestamp": "2025-11-25T18:57:31.410231",
+      "concept_id": "variables",
+      "mode": "quiz"
+    },
+    {
+      "timestamp": "2025-11-25T19:00:53.250439",
+      "concept_id": "variables",
+      "mode": "teach_back",
+      "score": 90,
+      "feedback": "The user provided a clear explanation using the container analogy. They correctly identified that variables store different types of values (numbers, text) and are used later in the code. Feedback for improvement includes explicitly mentioning that variables have names and that their values can be changed."
+    },
+    {
+      "timestamp": "2025-11-25T19:02:38.460956",
+      "concept_id": "variables",
+      "mode": "learn"
+    }
+  ],
+  "concept_mastery": {
+    "variables": {
+      "teach_back_scores": [
+        90
+      ],
+      "average_score": 90.0,
+      "times_learned": 2,
+      "times_quizzed": 2,
+      "times_taught_back": 1,
+      "last_activity": "2025-11-25T19:02:38.460969"
+    }
+  }
+}
