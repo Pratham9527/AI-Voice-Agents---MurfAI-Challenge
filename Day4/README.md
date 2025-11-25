@@ -1,302 +1,333 @@
-# Day 3 - Health & Wellness Voice Companion
+# Day 4 - Active Recall Coach 🎓
 
-> 🎙️ **Part of the AI Voice Agents Challenge by murf.ai**
->
-> A supportive, grounded wellness companion that conducts daily voice check-ins and tracks your mood, energy, and goals over time.
+**Teach-the-Tutor: Multi-Agent Voice Learning System**
 
-## 🌟 What This Agent Does
+A sophisticated voice AI system that helps you learn programming concepts through active recall. The agent uses three distinct learning modes, each powered by a different AI personality with unique voices.
 
-This is a **daily health & wellness voice companion** that:
+## 🎯 Overview
 
-- ✅ Conducts warm, supportive daily check-ins via voice
-- ✅ Asks about your mood, energy levels, and daily intentions
-- ✅ Provides simple, actionable wellness advice (no medical claims)
-- ✅ Persists check-in data in JSON format
-- ✅ References your previous 2 check-ins for continuity
-- ✅ Maintains conversation context between sessions
+This project implements a **teach-back learning system** where the best way to learn is to teach. The AI explains concepts, quizzes you, and then asks you to explain topics back—scoring your understanding using LLM-based evaluation.
 
-## 🎯 Key Features
+### Core Features
 
-### Conversation Flow
-1. **Greet** - Welcomes you and references previous check-ins
-2. **Mood Check** - "How are you feeling today?" (text + 1-10 scale)
-3. **Energy Assessment** - "What's your energy like?" (1-10 scale)
-4. **Stress Check** - "Anything on your mind or stressing you out?"
-5. **Daily Goals** - "What 1-3 things would you like to accomplish?"
-6. **Supportive Advice** - Simple, grounded suggestions (walks, breaks, task breakdown)
-7. **Recap & Confirm** - Summarizes session and confirms accuracy
-8. **Todoist Integration** (Optional) - Offers to create tasks in Todoist
-9. **Save** - Stores data to `wellness_log.json`
+✅ **Three Learning Modes**
+- **Learn Mode** (Matthew) - AI explains concepts clearly
+- **Quiz Mode** (Alicia) - AI tests your understanding with questions
+- **Teach-Back Mode** (Ken) - You explain concepts, AI scores you (0-100)
 
-### 📋 Todoist Integration (MCP)
+✅ **Multi-Agent Architecture**
+- 4 specialized agents with focused responsibilities
+- Seamless handoffs with context preservation
+- Distinct Murf AI voices for each mode
 
-**NEW!** The agent can now create tasks in Todoist from your daily objectives.
+✅ **Content-Driven Learning**
+- 4 programming concepts: Variables, Loops, Functions, Conditionals
+- Easily extensible JSON-based content structure
 
-**How it works:**
-- After stating your goals, agent asks: *"Would you like me to add these to Todoist so you can track them?"*
-- If you agree, tasks are created automatically in your Todoist inbox
-- Agent confirms: *"I've created 3 tasks in Todoist"*
+✅ **Progress Tracking**
+- Automatic session logging
+- Teach-back score history
+- Concept mastery calculations
+- Performance analytics
 
-**Setup (Optional):**
-1. Create free account at https://todoist.com
-2. Get API token from https://todoist.com/app/settings/integrations/developer
-3. Add to `backend/.env`:
-   ```
-   TODOIST_API_KEY=your_api_token_here
-   ```
-4. Restart the agent
+## 🏗️ Architecture
 
-**Note:** Todoist integration is completely optional. The agent works perfectly fine without it!
-
-### 📈 Weekly Reflection & Analytics
-
-**NEW!** The agent can now analyze your wellness history and provide insights.
-
-**Ask questions like:**
-- "How has my mood been this week?"
-- "Did I follow through on my goals?"
-- "Show me my weekly summary"
-- "How am I doing?"
-
-**What you get:**
-- 📊 Average mood score over the past 7 days
-- ⚡ Average energy level trends
-- 🎯 Goal-setting consistency metrics
-- 💙 Supportive, non-judgmental summaries
-
-**Example:**
 ```
-📊 Mood: Averaging 7.2/10 - pretty good overall
-⚡ Energy: Averaging 6.0/10 - moderate energy
-🎯 Goals: Set objectives on 6 out of 7 days (excellent consistency)
-
-You're doing well! Keep up the positive momentum. 😊
+GreeterAgent (Default Voice)
+    ↓
+    Asks user preference
+    ↓
+┌───────────┬──────────────┬─────────────┐
+│           │              │             │
+Learn       Quiz        Teach-Back    Continue
+(Matthew)   (Alicia)    (Ken)         Same Topic
+│           │              │             │
+└───────────┴──────────────┴─────────────┘
+         ↑ Seamless Mode Switching
 ```
 
-**Requirements:**
-- At least 3 check-ins to get meaningful insights
-- Works best when you use numeric scales (e.g., "7/10" for mood)
+### Agent Roles
 
-See [WEEKLY_REFLECTION.md](WEEKLY_REFLECTION.md) for detailed guide.
-
-### Data Persistence
-
-All check-ins are saved to `backend/src/wellness_log.json`:
-
-```json
-{
-  "entries": [
-    {
-      "timestamp": "2025-11-24T11:45:14",
-      "date": "2025-11-24 11:45",
-      "mood": "feeling good, a bit anxious about work",
-      "energy_level": "7/10",
-      "daily_objectives": [
-        "finish coding project",
-        "take a walk",
-        "call a friend"
-      ],
-      "agent_summary": "User reports good energy with some work anxiety. Has 3 balanced goals for the day."
-    }
-  ]
-}
-```
-
-### Agent Guardrails
-
-🚫 **The agent will NOT:**
-- Provide medical diagnoses
-- Offer clinical therapy
-- Make medical recommendations
-- Replace professional healthcare
-
-✅ **The agent WILL:**
-- Listen supportively
-- Ask guided check-in questions
-- Offer simple, grounded advice (walks, breaks, deep breathing)
-- Validate your feelings
-- Help break down overwhelming tasks
-
-## 🚀 Setup & Running
-
-### Prerequisites
-
-Same as Day 1 - you'll need:
-- Python with `uv` package manager
-- LiveKit account and credentials
-- Murf AI API access (for TTS)
-- Google API key (for Gemini LLM)
-- Deepgram API key (for STT)
-
-### Installation
-
-```bash
-cd Day3/backend
-uv sync
-```
-
-### Configure Environment
-
-Copy `.env.example` to `.env.local` and add your API keys:
-
-```bash
-LIVEKIT_URL=your_livekit_url
-LIVEKIT_API_KEY=your_api_key
-LIVEKIT_API_SECRET=your_api_secret
-```
-
-Or use the LiveKit CLI:
-
-```bash
-lk cloud auth
-lk app env -w -d .env.local
-```
-
-### Download Required Models
-
-```bash
-uv run python src/agent.py download-files
-```
-
-### Run in Console Mode
-
-Test the agent directly in your terminal:
-
-```bash
-uv run python src/agent.py console
-```
-
-### Run in Dev Mode
-
-For use with frontend or telephony:
-
-```bash
-uv run python src/agent.py dev
-```
-
-## 🧪 Testing the Agent
-
-### First Session
-- Agent will greet you without previous context
-- Have a conversation about mood, energy, goals
-- Agent saves your check-in to `wellness_log.json`
-
-### Second Session
-- Agent will reference your previous check-in
-- Example: *"Last time we talked, you mentioned feeling a bit anxious about work. How does today compare?"*
-- New data is appended to the log
-
-### Third+ Sessions
-- Agent remembers last 2 check-ins
-- Provides continuity: *"I noticed your energy was 7/10 yesterday. How about today?"*
+| Agent | Voice | Purpose | Key Features |
+|-------|-------|---------|-------------|
+| **GreeterAgent** | Default | Routes users | Progress summary, mode selection |
+| **LearnAgent** | Matthew | Teaches concepts | Explanations, examples, analogies |
+| **QuizAgent** | Alicia | Tests knowledge | Questions, feedback, difficulty scaling |
+| **TeachBackAgent** | Ken | Evaluates understanding | LLM scoring (0-100), specific feedback |
 
 ## 📁 Project Structure
 
 ```
-Day3/
+Day4/
 ├── backend/
 │   ├── src/
-│   │   ├── agent.py              # Main wellness companion agent
-│   │   ├── wellness_log.json     # Persistent data storage
-│   │   └── __init__.py
-│   ├── tests/
-│   │   └── test_agent.py
-│   ├── pyproject.toml
-│   ├── README.md
-│   └── ...
-└── frontend/                     # (Same as Day 1)
+│   │   ├── agent.py                 # Multi-agent system
+│   │   └── tutor_progress.json      # Learning progress (auto-created)
+│   ├── shared-data/
+│   │   └── day4_tutor_content.json  # Learning content (4 concepts)
+│   ├── AGENTS.md                    # Architecture documentation
+│   └── .env                         # Environment variables
+└── frontend/
+    └── (LiveKit React UI)
 ```
 
-## 🔧 Key Implementation Details
+## 🚀 Quick Start
 
-### Function Tools
+### Prerequisites
 
-The agent has two main function tools:
+- Python 3.10+
+- Node.js 18+
+- LiveKit Cloud account
+- Murf AI API access
 
-1. **`get_previous_checkins(days=2)`**
-   - Retrieves the last N check-ins from JSON
-   - Provides context for continuity
-   - Default: last 2 days
+### Backend Setup
 
-2. **`save_daily_checkin(mood, energy_level, daily_objectives, agent_summary)`**
-   - Saves check-in data to JSON
-   - Includes timestamp, mood, energy, goals
-   - Auto-generates summary if not provided
+1. **Navigate to backend**
+   ```bash
+   cd Day4/backend
+   ```
 
-### JSON Schema
+2. **Install dependencies**
+   ```bash
+   uv sync
+   ```
 
-Each entry contains:
-- `timestamp` - ISO format datetime
-- `date` - Human-readable date/time
-- `mood` - Text description of mood
-- `energy_level` - Preferably as scale (e.g., "7/10")
-- `daily_objectives` - Array of 1-3 goals
-- `agent_summary` - Brief recap of session
+3. **Configure environment**
+   
+   Create/update `.env`:
+   ```env
+   LIVEKIT_URL=wss://your-project.livekit.cloud
+   LIVEKIT_API_KEY=your_api_key
+   LIVEKIT_API_SECRET=your_api_secret
+   MURF_API_KEY=your_murf_key
+   DEEPGRAM_API_KEY=your_deepgram_key
+   ```
 
-## 💡 Example Conversation
+4. **Run the agent**
+   ```bash
+   python src/agent.py dev
+   ```
 
+### Frontend Setup
+
+1. **Navigate to frontend**
+   ```bash
+   cd Day4/frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open browser**
+   ```
+   http://localhost:3000
+   ```
+
+## 💡 How to Use
+
+### Basic Flow
+
+1. **Connect** to the voice room
+2. **Greeter** welcomes you and asks which mode you prefer
+3. **Choose a mode**: "I want to learn about variables"
+4. **Interact** with the specialized agent (Matthew, Alicia, or Ken)
+5. **Switch modes** anytime: "Quiz me" or "Let me teach it back"
+
+### Example Conversations
+
+**Starting Learn Mode:**
 ```
-Agent: Hi! Welcome to your daily wellness check-in. Last time we talked, 
-       you mentioned feeling good with some work anxiety. How are you 
-       feeling today?
-
-User: I'm doing okay, maybe a 6 out of 10.
-
-Agent: Thanks for sharing. What's your energy level like today?
-
-User: Pretty low, maybe a 4.
-
-Agent: I hear you. What's on your mind? Anything stressing you out?
-
-User: Just tired from yesterday. A lot on my plate.
-
-Agent: That makes sense. What are 1-3 things you'd like to accomplish today?
-
-User: Finish the report, take a short walk, and rest.
-
-Agent: Those sound like good priorities. Given your lower energy, maybe 
-       try breaking that report into smaller chunks? And that walk could 
-       really help refresh you. Let me recap: You're feeling about a 6/10, 
-       energy at 4, and you want to finish a report, take a walk, and rest. 
-       Does that sound right?
-
-User: Yes, that's right.
-
-Agent: Great! I've saved this check-in. See you tomorrow!
+You: "I want to learn about loops"
+Greeter: "Great! Connecting you to Matthew..."
+Matthew: "Hi, I'm Matthew! Loops allow you to repeat code..."
 ```
 
-## 📚 Resources
+**Switching to Quiz:**
+```
+You: "Quiz me on this"
+Matthew: "Let's test your understanding..."
+Alicia: "Hi! What's the difference between for and while loops?"
+```
+
+**Teach-Back Session:**
+```
+You: "I want to teach it back"
+Ken: "Explain loops to me in your own words..."
+You: [Provides explanation]
+Ken: "Score: 85/100. Great job! You covered..."
+```
+
+## 📊 Progress Tracking
+
+The system automatically tracks:
+
+### Session Logs
+Every interaction is logged with timestamp, mode, and optional scores:
+
+```json
+{
+  "timestamp": "2025-11-25T19:00:00Z",
+  "concept_id": "variables",
+  "mode": "teach_back",
+  "score": 85,
+  "feedback": "Excellent explanation! You covered..."
+}
+```
+
+### Concept Mastery
+Aggregated stats per concept:
+
+```json
+{
+  "variables": {
+    "teach_back_scores": [65, 75, 85],
+    "average_score": 75.0,
+    "times_learned": 3,
+    "times_quizzed": 5,
+    "times_taught_back": 3,
+    "last_activity": "2025-11-25T19:00:00Z"
+  }
+}
+```
+
+**View your progress**: Ask the Greeter "Show me my progress"
+
+## 📚 Learning Content
+
+### Available Concepts
+
+| Concept | Description |
+|---------|-------------|
+| **Variables** | Containers that store data values |
+| **Loops** | Repeating code blocks (for/while loops) |
+| **Functions** | Reusable code blocks with parameters |
+| **Conditionals** | Decision-making with if/else statements |
+
+### Adding New Concepts
+
+Edit `shared-data/day4_tutor_content.json`:
+
+```json
+{
+  "id": "arrays",
+  "title": "Arrays",
+  "summary": "Arrays are collections that store multiple values of the same type...",
+  "sample_question": "What is an array and when would you use one?"
+}
+```
+
+Then restart the agent.
+
+## 🔧 Configuration
+
+### Murf Voice Settings
+
+Current voices (configurable in `agent.py`):
+- **Matthew** (Learn): Patient, teaching tone
+- **Alicia** (Quiz): Encouraging, inquisitive tone
+- **Ken** (Teach-Back): Thoughtful, evaluative tone
+
+### LLM Settings
+
+- **Model**: Gemini 2.5 Flash
+- **STT**: Deepgram Nova-3
+- **Turn Detection**: Multilingual Model
+
+## 🧪 Testing
+
+### Manual Testing Checklist
+
+- [ ] Greeter welcomes and offers modes
+- [ ] Learn mode explains concepts (Matthew voice)
+- [ ] Quiz mode asks questions (Alicia voice)
+- [ ] Teach-back evaluates with scores (Ken voice)
+- [ ] Mode switching works smoothly
+- [ ] Progress is tracked in `tutor_progress.json`
+- [ ] All 4 concepts are accessible
+
+### Test Commands
+
+```bash
+# Run agent in development mode
+python src/agent.py dev
+
+# View progress file
+cat src/tutor_progress.json
+```
+
+## 📖 Key Resources
 
 - [LiveKit Agents Documentation](https://docs.livekit.io/agents/)
-- [Function Tools Guide](https://docs.livekit.io/agents/build/tools/)
-- [Agent State & Handoffs](https://docs.livekit.io/agents/build/agents-handoffs/#passing-state)
-- [Main Challenge README](../README.md)
+- [Agent Handoffs Guide](https://docs.livekit.io/agents/build/agents-handoffs/)
+- [Murf AI Voice API](https://murf.ai/)
+- [Implementation Details](./backend/AGENTS.md)
 
-## 🎯 Challenge Requirements Met
+## 🐛 Troubleshooting
 
-✅ **Primary Goal:**
-- Clear, grounded system prompt
-- Daily check-ins via voice
-- JSON persistence of check-in data
-- Uses past data to inform conversations
+### Common Issues
 
-✅ **Behavior Requirements:**
-- Asks about mood and energy
-- Asks about daily intentions/objectives
-- Offers simple, realistic advice
-- Non-diagnostic, supportive only
-- Closes with brief recap and confirmation
+**"Concept not found" error**
+- Ensure you're using exact concept IDs: `"variables"`, `"loops"`, `"functions"`, `"conditionals"`
+- Not numbers like "1", "2"
 
-✅ **Data Persistence:**
-- Single JSON file (`wellness_log.json`)
-- Each entry has date/time, mood, energy, objectives
-- Agent-generated summary included
-- Consistent, human-readable schema
+**Agent not starting**
+- Check all API keys in `.env`
+- Verify `day4_tutor_content.json` exists
+- Ensure Python dependencies are installed (`uv sync`)
 
-## 📝 License
+**Voice not changing between agents**
+- Currently voices use session-level TTS
+- Future: Implement per-agent voice overrides
 
-MIT License - See [LICENSE](LICENSE) file for details.
+**Progress not saving**
+- Check write permissions for `src/tutor_progress.json`
+- Verify JSON is valid after manual  edits
+
+## 📝 Development Notes
+
+### Design Decisions
+
+**Why Multi-Agent?**
+- Focused instructions per mode (faster LLM responses)
+- Natural distinct personalities
+- Easier to maintain and extend
+- Better context management
+
+**Why JSON Content?**
+- Easy to add new concepts without code changes
+- Non-technical users can contribute content
+- Supports multiple learning domains
+
+**Why Teach-Back?**
+- Active recall proven most effective for retention
+- LLM scoring provides objective feedback
+- Tracks actual understanding vs. passive learning
+
+## 🎯 Future Enhancements
+
+- [ ] Per-agent voice overrides
+- [ ] More programming concepts (OOP, recursion, etc.)
+- [ ] Spaced repetition scheduling
+- [ ] Visual aids/diagrams support
+- [ ] Multi-language content
+- [ ] Study streak tracking
+- [ ] Peer comparison analytics
+
+## 📄 License
+
+[Your License Here]
+
+## 👥 Contributors
+
+Built as part of the MurfAI Voice Agents Challenge - Day 4
 
 ---
 
-**Built with:** LiveKit Agents, Murf TTS (Falcon), Google Gemini 2.5 Flash, Deepgram Nova-3
+**Happy Learning! 🚀** Remember: The best way to learn is to teach!
