@@ -1,59 +1,132 @@
-🎙️ 10 Days of AI Voice Agents Challenge (Murf AI)
+# 🎙️ 10 Days of AI Voice Agents Challenge (Murf AI)
 
-This repository tracks my progress through the Murf AI Voice Agents Challenge 2025. The goal is to build a fully functional, low-latency, conversational AI agent using modern tools and the Murf Falcon TTS API over 10 days.
+This repository tracks my progress through the **Murf AI Voice Agents Challenge 2025**. The goal is to build fully functional, low-latency, conversational AI agents using modern tools and the Murf Falcon TTS API over 10 days.
 
-⚡ Core Technology Stack
+## ⚡ Core Technology Stack
 
 The entire project is built on a real-time, low-latency stack:
 
-TTS (Voice): Murf Falcon
+- **TTS (Voice)**: Murf Falcon
+- **STT (Ears)**: Deepgram Nova-3
+- **LLM (Brain)**: Google Gemini 2.5 Flash
+- **Orchestration**: LiveKit Agents (Python)
 
-STT (Ears): Deepgram
+## 🎯 Progress
 
-LLM (Brain): Google Gemini Flash
+| Day | Goal | Status | Key Achievement |
+|-----|------|--------|-----------------|
+| **Day 1** | Get the starter agent running end-to-end | ✅ COMPLETE | Established the foundational voice pipeline (STT → LLM → TTS) |
+| **Day 2** | Create a functional Coffee Shop Barista Agent | ✅ COMPLETE | Implemented Function Calling and State Management to track and validate structured orders (Drink, Size, Milk, Name) |
+| **Day 3** | Build a Health & Wellness Voice Companion | ✅ COMPLETE | Implemented daily check-ins with JSON persistence, weekly reflection analytics, and Todoist MCP integration for task creation |
+| **Day 4** | Create a Teach-the-Tutor Active Recall Coach | ✅ COMPLETE | Built multi-agent system with Learn/Quiz/Teach-Back modes, distinct Murf voices (Matthew/Alicia/Ken), LLM-based scoring (0-100), and progress tracking |
+| **Day 5** | [To be continued] | ⏳ Pending | ... |
 
-Orchestration: LiveKit Agents (Python)
+## 📂 Repository Structure
 
-🎯 Progress
+```
+AI-Voice-Agents---MurfAI-Challenge/
+├── Day1/           # Basic voice agent setup
+├── Day2/           # Coffee Shop Barista (function calling)
+├── Day3/           # Wellness Companion (persistence + MCP)
+├── Day4/           # Active Recall Coach (multi-agent + scoring)
+└── README.md       # This file
+```
 
-Day
+## 🚀 Quick Start
 
-Goal
+Each day has its own folder with backend and frontend code. To run any day's project:
 
-Status
+### Backend
+```bash
+cd Day[X]/backend
+uv sync
+python src/agent.py dev
+```
 
-Key Achievement
+### Frontend
+```bash
+cd Day[X]/frontend
+npm install
+npm run dev
+```
 
-Day 1
+Then open `http://localhost:3000` in your browser.
 
-Get the starter agent running end-to-end.
+## 📖 Day-by-Day Details
 
-✅ COMPLETE
+### Day 1: Foundation
+- Set up LiveKit Agents framework
+- Integrated Murf Falcon TTS
+- Connected Deepgram STT
+- Configured Gemini 2.5 Flash LLM
+- **Result**: Working voice conversation loop
 
-Established the foundational voice pipeline (STT → LLM → TTS).
+### Day 2: Coffee Shop Barista
+- Implemented function calling with LiveKit
+- Created state management for orders
+- Added validation logic (size, milk type, drink)
+- Built structured data collection flow
+- **Result**: Agent that takes complete coffee orders
 
-Day 2
+### Day 3: Wellness Companion
+- Daily check-in with mood, energy, sleep tracking
+- JSON file persistence for historical data
+- Weekly reflection with analytics
+- MCP (Model Context Protocol) integration
+- Todoist API for creating tasks from user goals
+- **Result**: Personal wellness coach with memory
 
-Create a functional Coffee Shop Barista Agent.
+### Day 4: Active Recall Coach
+- Multi-agent architecture (4 specialized agents)
+- Agent handoffs with context preservation
+- Distinct Murf voices per mode:
+  - **Matthew** (Learn mode) - Patient teaching
+  - **Alicia** (Quiz mode) - Encouraging testing
+  - **Ken** (Teach-Back mode) - Thoughtful evaluation
+- LLM-based scoring system (0-100 with feedback)
+- Content-driven learning from JSON
+- Progress tracking with concept mastery
+- **Result**: Intelligent tutor that evaluates understanding
 
-✅ COMPLETE
+## 🛠️ Technologies Used
 
-Implemented Function Calling and State Management to track and validate a structured order (Drink, Size, Milk, Name).
+- **Python 3.10+** - Backend language
+- **LiveKit Agents SDK** - Voice agent orchestration
+- **Murf AI** - Premium Text-to-Speech
+- **Deepgram** - Speech-to-Text
+- **Google Gemini** - Large Language Model
+- **Next.js + React** - Frontend UI
+- **Model Context Protocol (MCP)** - External tool integration
+- **Todoist API** - Task management (Day 3)
 
-Day 3
+## 📝 Key Learnings
 
-[To be continued]
+- **Low-latency voice** requires careful orchestration of STT → LLM → TTS
+- **Function calling** enables structured data extraction from natural conversations  
+- **State management** is critical for multi-turn conversations
+- **Multi-agent systems** allow focused instructions and distinct personalities
+- **MCP integration** extends agent capabilities with external tools
+- **Context preservation** during agent handoffs maintains conversation flow
+- **LLM-based evaluation** can provide nuanced feedback on user explanations
 
-⏳ Pending
+## 🔮 Upcoming Days
 
-[e.g., Add Chat History, Implement Streaming]
+Days 5-10 will explore:
+- Advanced conversation patterns
+- Context-aware responses
+- Emotion detection and adaptation
+- Multi-modal interactions
+- Production deployment strategies
 
-...
+## 📄 License
 
+MIT License - see individual day folders for specific details
 
+## 🙏 Credits
 
+Challenge by [Murf AI](https://murf.ai/)  
+Built with [LiveKit](https://livekit.io/)
 
+---
 
-
-
-See the backend/src/agent.py file for the current agent logic, and the Day 2 README for technical details on function calling.
+**Follow along** as I build increasingly sophisticated voice AI agents! Each day builds on the previous, creating a comprehensive learning path for voice AI development.
