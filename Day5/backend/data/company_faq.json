@@ -1,0 +1,152 @@
+{
+  "company": {
+    "name": "Razorpay",
+    "tagline": "Power your finance, grow your business",
+    "description": "Razorpay is India's leading full-stack financial solutions company, enabling businesses to accept, process and disburse payments with its product suite. We give you access to all payment modes including credit card, debit card, netbanking, UPI and popular wallets.",
+    "founded": "2014",
+    "headquarters": "Bangalore, India",
+    "focus": "Payment gateway, banking, payroll, and business banking solutions for startups, SMBs, and enterprises"
+  },
+  "products": [
+    {
+      "name": "Payment Gateway",
+      "description": "Accept online payments via 100+ payment methods including cards, UPI, wallets, and netbanking",
+      "target_audience": "E-commerce, SaaS, marketplaces, online businesses",
+      "keywords": ["payment", "gateway", "online", "integration", "checkout"]
+    },
+    {
+      "name": "Razorpay Route",
+      "description": "Smart automated payment routing and splits for marketplaces and platforms",
+      "target_audience": "Marketplaces, platforms with multiple vendors",
+      "keywords": ["route", "split", "marketplace", "vendor", "payout"]
+    },
+    {
+      "name": "RazorpayX Payroll",
+      "description": "Automated payroll and compliance management for businesses",
+      "target_audience": "Companies with employees, HR teams",
+      "keywords": ["payroll", "salary", "compliance", "employee", "hr"]
+    },
+    {
+      "name": "RazorpayX Business Banking",
+      "description": "Current account with automated workflows, vendor payments, and corporate cards",
+      "target_audience": "Growing businesses, startups, SMBs",
+      "keywords": ["banking", "current account", "business", "corporate", "card"]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq_001",
+      "question": "What does Razorpay do?",
+      "answer": "Razorpay is a complete financial solutions platform for businesses. We help you accept payments online through our Payment Gateway, manage payroll with RazorpayX Payroll, handle business banking needs, and automate payment routing for marketplaces. Essentially, we power your entire finance stack.",
+      "category": "general",
+      "keywords": ["what", "does", "razorpay", "do", "product", "service", "about", "company"]
+    },
+    {
+      "id": "faq_002",
+      "question": "What payment methods do you support?",
+      "answer": "We support 100+ payment methods including all major credit and debit cards, UPI, net banking from 50+ banks, and popular wallets like Paytm, PhonePe, Google Pay, and more. We also support international cards and EMI options.",
+      "category": "payment_gateway",
+      "keywords": ["payment", "method", "upi", "card", "wallet", "netbanking", "support", "accept"]
+    },
+    {
+      "id": "faq_003",
+      "question": "What is your pricing for the payment gateway?",
+      "answer": "Our standard pricing is 2% per transaction for domestic payments. For international payments, it's 3% plus currency conversion charges. We also have custom pricing for high-volume businesses. There are no setup fees or annual maintenance charges.",
+      "category": "pricing",
+      "keywords": ["pricing", "cost", "fee", "charge", "transaction", "price", "how much"]
+    },
+    {
+      "id": "faq_004",
+      "question": "Do you have a free tier or trial?",
+      "answer": "Yes! You can sign up for free and start testing the integration in test mode at no cost. You only pay transaction fees when you go live and start processing real payments. There's no setup fee or monthly commitment.",
+      "category": "pricing",
+      "keywords": ["free", "trial", "test", "signup", "tier", "plan"]
+    },
+    {
+      "id": "faq_005",
+      "question": "Who is Razorpay for? Who are your typical customers?",
+      "answer": "We serve businesses of all sizes - from startups and small businesses to large enterprises. Our customers include e-commerce stores, SaaS companies, EdTech platforms, marketplaces, subscription businesses, and any business that needs to accept online payments or manage finances digitally.",
+      "category": "general",
+      "keywords": ["who", "customer", "target", "audience", "business", "for", "use"]
+    },
+    {
+      "id": "faq_006",
+      "question": "How long does integration take?",
+      "answer": "Most developers can integrate our payment gateway in a few hours to a day. We provide easy-to-use SDKs for major platforms like WordPress, Shopify, WooCommerce, and code libraries for all popular programming languages. We also have detailed documentation and 24/7 developer support.",
+      "category": "technical",
+      "keywords": ["integration", "setup", "install", "implement", "time", "how long", "developer"]
+    },
+    {
+      "id": "faq_007",
+      "question": "Is Razorpay secure? Do you handle PCI compliance?",
+      "answer": "Yes, absolutely. We are PCI-DSS Level 1 compliant, which is the highest level of security certification. All payments are encrypted with 256-bit SSL. We handle all compliance requirements so you don't have to worry about storing sensitive card data.",
+      "category": "technical",
+      "keywords": ["security", "secure", "pci", "compliance", "safe", "encryption", "data"]
+    },
+    {
+      "id": "faq_008",
+      "question": "What is the settlement time? When do I receive my money?",
+      "answer": "For KYC-verified accounts, settlements happen within T+2 working days (transaction day plus 2 working days). For instant settlements, we offer RazorpayX Current Account where you can get settlements in near real-time for an additional fee.",
+      "category": "payment_gateway",
+      "keywords": ["settlement", "money", "receive", "payout", "transfer", "time", "when"]
+    },
+    {
+      "id": "faq_009",
+      "question": "Do you support subscriptions and recurring payments?",
+      "answer": "Yes! We have a dedicated Subscriptions product that handles recurring billing, automated invoicing, payment retries, and subscription management. It's perfect for SaaS businesses, membership sites, and any subscription-based business model.",
+      "category": "payment_gateway",
+      "keywords": ["subscription", "recurring", "billing", "automated", "saas", "monthly"]
+    },
+    {
+      "id": "faq_010",
+      "question": "What is Razorpay Route and how does it work?",
+      "answer": "Route is our smart payment routing solution for marketplaces and platforms. It automatically splits payments between platform and vendors, handles escrow, and manages payouts. You can set custom commission structures and automate the entire payment flow for your marketplace.",
+      "category": "route",
+      "keywords": ["route", "marketplace", "split", "vendor", "commission", "platform"]
+    },
+    {
+      "id": "faq_011",
+      "question": "Tell me about RazorpayX Payroll",
+      "answer": "RazorpayX Payroll is a complete automated payroll solution. It handles salary processing, tax calculations, compliance filings, employee self-service portal, and direct deposit to employee accounts. It saves HR teams 10+ hours every month on payroll management.",
+      "category": "payroll",
+      "keywords": ["payroll", "salary", "employee", "compliance", "hr", "tax"]
+    },
+    {
+      "id": "faq_012",
+      "question": "What integrations do you offer?",
+      "answer": "We integrate with all major e-commerce platforms like Shopify, WooCommerce, Magento, and custom websites. We also integrate with accounting software like Zoho Books, Tally, and QuickBooks. Plus, we have REST APIs and webhooks for custom integrations.",
+      "category": "technical",
+      "keywords": ["integration", "platform", "shopify", "woocommerce", "api", "webhook", "connect"]
+    },
+    {
+      "id": "faq_013",
+      "question": "Do you offer customer support?",
+      "answer": "Yes! We provide 24/7 email and chat support for all customers. We also have a dedicated account manager for enterprise clients, comprehensive documentation, and an active developer community. Our average response time is under 2 hours.",
+      "category": "general",
+      "keywords": ["support", "help", "customer service", "assistance", "contact"]
+    },
+    {
+      "id": "faq_014",
+      "question": "Can I accept international payments?",
+      "answer": "Yes, you can accept international card payments in 100+ currencies. We handle automatic currency conversion, international compliance, and provide detailed analytics on international transactions. The pricing is 3% plus applicable currency conversion charges.",
+      "category": "payment_gateway",
+      "keywords": ["international", "foreign", "global", "currency", "overseas", "export"]
+    },
+    {
+      "id": "faq_015",
+      "question": "What kind of businesses use Razorpay?",
+      "answer": "We work with diverse businesses - from small online stores to unicorn startups. Common use cases include e-commerce, SaaS subscriptions, EdTech course payments, food delivery platforms, healthcare bookings, ticket sales, donation platforms, and B2B marketplaces.",
+      "category": "general",
+      "keywords": ["business", "type", "industry", "use case", "example", "customer"]
+    }
+  ],
+  "pricing": {
+    "payment_gateway": {
+      "domestic": "2% per transaction",
+      "international": "3% + currency conversion",
+      "setup_fee": "Free",
+      "annual_fee": "Free"
+    },
+    "notes": "Custom pricing available for high-volume businesses. No hidden charges. Only pay for successful transactions."
+  }
+}
