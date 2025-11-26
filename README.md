@@ -19,7 +19,7 @@ The entire project is built on a real-time, low-latency stack:
 | **Day 2** | Create a functional Coffee Shop Barista Agent | ✅ COMPLETE | Implemented Function Calling and State Management to track and validate structured orders (Drink, Size, Milk, Name) |
 | **Day 3** | Build a Health & Wellness Voice Companion | ✅ COMPLETE | Implemented daily check-ins with JSON persistence, weekly reflection analytics, and Todoist MCP integration for task creation |
 | **Day 4** | Create a Teach-the-Tutor Active Recall Coach | ✅ COMPLETE | Built multi-agent system with Learn/Quiz/Teach-Back modes, distinct Murf voices (Matthew/Alicia/Ken), LLM-based scoring (0-100), and progress tracking |
-| **Day 5** | [To be continued] | ⏳ Pending | ... |
+| **Day 5** | Create a Razorpay SDR Voice Agent | ✅ COMPLETE | Built a professional SDR agent with FAQ pre-warming, keyword-based search, and natural lead capture with master database storage |
 
 ## 📂 Repository Structure
 
@@ -29,6 +29,7 @@ AI-Voice-Agents---MurfAI-Challenge/
 ├── Day2/           # Coffee Shop Barista (function calling)
 ├── Day3/           # Wellness Companion (persistence + MCP)
 ├── Day4/           # Active Recall Coach (multi-agent + scoring)
+├── Day5/           # Razorpay SDR Agent (FAQ + Lead Capture)
 └── README.md       # This file
 ```
 
@@ -88,6 +89,15 @@ Then open `http://localhost:3000` in your browser.
 - Progress tracking with concept mastery
 - **Result**: Intelligent tutor that evaluates understanding
 
+### Day 5: Razorpay SDR Voice Agent
+- **Pre-warming pattern** for instant FAQ availability
+- **Keyword-based search** for fast, reliable answers
+- **Natural lead capture** of 7 key fields (name, role, use case, etc.)
+- **Master database** storage for all leads
+- **Verbal summarization** at the end of calls
+- **Indian English voice** (Murf) for authentic localization
+- **Result**: Professional SDR that qualifies leads and answers questions
+
 ## 🛠️ Technologies Used
 
 - **Python 3.10+** - Backend language
@@ -108,6 +118,9 @@ Then open `http://localhost:3000` in your browser.
 - **MCP integration** extends agent capabilities with external tools
 - **Context preservation** during agent handoffs maintains conversation flow
 - **LLM-based evaluation** can provide nuanced feedback on user explanations
+- **Pre-warming data** (like FAQs) significantly reduces latency during calls
+- **Keyword matching** can be faster and more predictable than semantic search for specific domains
+- **Natural lead capture** feels less like a form interrogation and more like a conversation
 
 ## 🔮 Upcoming Days
 
