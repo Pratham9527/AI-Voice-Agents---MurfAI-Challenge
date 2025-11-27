@@ -20,6 +20,7 @@ The entire project is built on a real-time, low-latency stack:
 | **Day 3** | Build a Health & Wellness Voice Companion | ✅ COMPLETE | Implemented daily check-ins with JSON persistence, weekly reflection analytics, and Todoist MCP integration for task creation |
 | **Day 4** | Create a Teach-the-Tutor Active Recall Coach | ✅ COMPLETE | Built multi-agent system with Learn/Quiz/Teach-Back modes, distinct Murf voices (Matthew/Alicia/Ken), LLM-based scoring (0-100), and progress tracking |
 | **Day 5** | Create a Razorpay SDR Voice Agent | ✅ COMPLETE | Built a professional SDR agent with FAQ pre-warming, keyword-based search, and natural lead capture with master database storage |
+| **Day 6** | Build a Fraud Alert Voice Agent for Banking | ✅ COMPLETE | Integrated SQLite database for fraud case management with secure verification via security questions and real-time status updates |
 
 ## 📂 Repository Structure
 
@@ -30,6 +31,7 @@ AI-Voice-Agents---MurfAI-Challenge/
 ├── Day3/           # Wellness Companion (persistence + MCP)
 ├── Day4/           # Active Recall Coach (multi-agent + scoring)
 ├── Day5/           # Razorpay SDR Agent (FAQ + Lead Capture)
+├── Day6/           # Fraud Alert Agent (Database Integration)
 └── README.md       # This file
 ```
 
@@ -98,6 +100,14 @@ Then open `http://localhost:3000` in your browser.
 - **Indian English voice** (Murf) for authentic localization
 - **Result**: Professional SDR that qualifies leads and answers questions
 
+### Day 6: Fraud Alert Voice Agent
+- **SQLite database integration** for dynamic fraud case loading
+- **Secure verification flow** using security questions (no PINs/passwords)
+- **Real-time transaction review** with merchant, amount, and time details
+- **Database write operations** to update case status (Safe/Fraud)
+- **Professional fraud analyst persona** - calm, reassuring, security-focused
+- **Result**: Banking fraud agent that verifies transactions and updates records
+
 ## 🛠️ Technologies Used
 
 - **Python 3.10+** - Backend language
@@ -121,10 +131,12 @@ Then open `http://localhost:3000` in your browser.
 - **Pre-warming data** (like FAQs) significantly reduces latency during calls
 - **Keyword matching** can be faster and more predictable than semantic search for specific domains
 - **Natural lead capture** feels less like a form interrogation and more like a conversation
+- **Database integration** transforms agents from passive talkers into active systems that update records
+- **Security-first design** requires careful handling of verification without exposing sensitive data
 
 ## 🔮 Upcoming Days
 
-Days 5-10 will explore:
+Days 7-10 will explore:
 - Advanced conversation patterns
 - Context-aware responses
 - Emotion detection and adaptation
