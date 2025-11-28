@@ -1,0 +1,245 @@
+{
+  "categories": {
+    "Groceries": [
+      {
+        "id": "grocery_001",
+        "name": "Whole Wheat Bread",
+        "category": "Groceries",
+        "price": 45,
+        "brand": "Harvest Gold",
+        "size": "400g",
+        "tags": ["vegan", "high-fiber"]
+      },
+      {
+        "id": "grocery_002",
+        "name": "White Bread",
+        "category": "Groceries",
+        "price": 40,
+        "brand": "Modern",
+        "size": "400g",
+        "tags": ["vegetarian"]
+      },
+      {
+        "id": "grocery_003",
+        "name": "Milk",
+        "category": "Groceries",
+        "price": 60,
+        "brand": "Amul",
+        "size": "1L",
+        "tags": ["dairy", "fresh"]
+      },
+      {
+        "id": "grocery_004",
+        "name": "Eggs",
+        "category": "Groceries",
+        "price": 70,
+        "brand": "Venky's",
+        "size": "12 pack",
+        "tags": ["protein", "fresh"]
+      },
+      {
+        "id": "grocery_005",
+        "name": "Peanut Butter",
+        "category": "Groceries",
+        "price": 180,
+        "brand": "Sundrop",
+        "size": "400g",
+        "tags": ["protein", "spread", "peanut"]
+      },
+      {
+        "id": "grocery_006",
+        "name": "Butter",
+        "category": "Groceries",
+        "price": 55,
+        "brand": "Amul",
+        "size": "100g",
+        "tags": ["dairy", "spread"]
+      },
+      {
+        "id": "grocery_007",
+        "name": "Pasta",
+        "category": "Groceries",
+        "price": 90,
+        "brand": "Maggi",
+        "size": "500g",
+        "tags": ["vegan", "italian", "dry-food"]
+      },
+      {
+        "id": "grocery_008",
+        "name": "Pasta Sauce",
+        "category": "Groceries",
+        "price": 120,
+        "brand": "Del Monte",
+        "size": "400g",
+        "tags": ["vegetarian", "italian", "sauce", "tomato"]
+      },
+      {
+        "id": "grocery_009",
+        "name": "Rice",
+        "category": "Groceries",
+        "price": 200,
+        "brand": "India Gate",
+        "size": "5kg",
+        "tags": ["vegan", "staple", "basmati"]
+      },
+      {
+        "id": "grocery_010",
+        "name": "Cooking Oil",
+        "category": "Groceries",
+        "price": 150,
+        "brand": "Fortune",
+        "size": "1L",
+        "tags": ["vegan", "sunflower"]
+      }
+    ],
+    "Snacks": [
+      {
+        "id": "snack_001",
+        "name": "Potato Chips",
+        "category": "Snacks",
+        "price": 20,
+        "brand": "Lays",
+        "size": "50g",
+        "tags": ["vegetarian", "salty"]
+      },
+      {
+        "id": "snack_002",
+        "name": "Chocolate Bar",
+        "category": "Snacks",
+        "price": 40,
+        "brand": "Cadbury Dairy Milk",
+        "size": "55g",
+        "tags": ["vegetarian", "sweet"]
+      },
+      {
+        "id": "snack_003",
+        "name": "Cookies",
+        "category": "Snacks",
+        "price": 30,
+        "brand": "Parle-G",
+        "size": "100g",
+        "tags": ["vegetarian", "biscuit"]
+      },
+      {
+        "id": "snack_004",
+        "name": "Namkeen Mix",
+        "category": "Snacks",
+        "price": 35,
+        "brand": "Haldiram's",
+        "size": "150g",
+        "tags": ["vegetarian", "spicy", "indian"]
+      },
+      {
+        "id": "snack_005",
+        "name": "Popcorn",
+        "category": "Snacks",
+        "price": 25,
+        "brand": "Act II",
+        "size": "70g",
+        "tags": ["vegetarian", "microwave"]
+      }
+    ],
+    "Prepared Food": [
+      {
+        "id": "prepared_001",
+        "name": "Margherita Pizza",
+        "category": "Prepared Food",
+        "price": 250,
+        "brand": "FreshMeals",
+        "size": "Medium",
+        "tags": ["vegetarian", "italian", "hot"]
+      },
+      {
+        "id": "prepared_002",
+        "name": "Veggie Sandwich",
+        "category": "Prepared Food",
+        "price": 80,
+        "brand": "FreshMeals",
+        "size": "Regular",
+        "tags": ["vegetarian", "fresh"]
+      },
+      {
+        "id": "prepared_003",
+        "name": "Paneer Burger",
+        "category": "Prepared Food",
+        "price": 120,
+        "brand": "FreshMeals",
+        "size": "Large",
+        "tags": ["vegetarian", "indian-fusion"]
+      },
+      {
+        "id": "prepared_004",
+        "name": "Chicken Biryani",
+        "category": "Prepared Food",
+        "price": 180,
+        "brand": "FreshMeals",
+        "size": "500g",
+        "tags": ["non-vegetarian", "indian", "hot"]
+      },
+      {
+        "id": "prepared_005",
+        "name": "Veg Pulao",
+        "category": "Prepared Food",
+        "price": 120,
+        "brand": "FreshMeals",
+        "size": "400g",
+        "tags": ["vegetarian", "indian", "hot"]
+      }
+    ],
+    "Beverages": [
+      {
+        "id": "beverage_001",
+        "name": "Orange Juice",
+        "category": "Beverages",
+        "price": 60,
+        "brand": "Real",
+        "size": "1L",
+        "tags": ["vegetarian", "fresh", "fruit"]
+      },
+      {
+        "id": "beverage_002",
+        "name": "Coffee",
+        "category": "Beverages",
+        "price": 120,
+        "brand": "Nescafe",
+        "size": "50g",
+        "tags": ["vegan", "instant"]
+      },
+      {
+        "id": "beverage_003",
+        "name": "Tea",
+        "category": "Beverages",
+        "price": 100,
+        "brand": "Tata Tea",
+        "size": "250g",
+        "tags": ["vegan", "leaves"]
+      }
+    ]
+  },
+  "recipes": {
+    "peanut butter sandwich": {
+      "name": "Peanut Butter Sandwich",
+      "items": ["grocery_001", "grocery_005"]
+    },
+    "butter sandwich": {
+      "name": "Butter Sandwich",
+      "items": ["grocery_002", "grocery_006"]
+    },
+    "pasta": {
+      "name": "Pasta for Two",
+      "items": ["grocery_007", "grocery_008"]
+    },
+    "pasta for two": {
+      "name": "Pasta for Two",
+      "items": ["grocery_007", "grocery_008"]
+    },
+    "breakfast": {
+      "name": "Simple Breakfast",
+      "items": ["grocery_002", "grocery_006", "grocery_003", "grocery_004"]
+    },
+    "simple breakfast": {
+      "name": "Simple Breakfast",
+      "items": ["grocery_002", "grocery_006", "grocery_003", "grocery_004"]
+    }
+  }
+}

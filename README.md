@@ -21,6 +21,7 @@ The entire project is built on a real-time, low-latency stack:
 | **Day 4** | Create a Teach-the-Tutor Active Recall Coach | ✅ COMPLETE | Built multi-agent system with Learn/Quiz/Teach-Back modes, distinct Murf voices (Matthew/Alicia/Ken), LLM-based scoring (0-100), and progress tracking |
 | **Day 5** | Create a Razorpay SDR Voice Agent | ✅ COMPLETE | Built a professional SDR agent with FAQ pre-warming, keyword-based search, and natural lead capture with master database storage |
 | **Day 6** | Build a Fraud Alert Voice Agent for Banking | ✅ COMPLETE | Integrated SQLite database for fraud case management with secure verification via security questions and real-time status updates |
+| **Day 7** | Build a Food & Grocery Ordering Voice Agent | ✅ COMPLETE | Created comprehensive shopping assistant with 30+ item catalog, intelligent recipe-based ordering, cart management, and JSON order persistence |
 
 ## 📂 Repository Structure
 
@@ -32,6 +33,7 @@ AI-Voice-Agents---MurfAI-Challenge/
 ├── Day4/           # Active Recall Coach (multi-agent + scoring)
 ├── Day5/           # Razorpay SDR Agent (FAQ + Lead Capture)
 ├── Day6/           # Fraud Alert Agent (Database Integration)
+├── Day7/           # Food & Grocery Ordering (E-commerce Cart)
 └── README.md       # This file
 ```
 
@@ -108,6 +110,15 @@ Then open `http://localhost:3000` in your browser.
 - **Professional fraud analyst persona** - calm, reassuring, security-focused
 - **Result**: Banking fraud agent that verifies transactions and updates records
 
+### Day 7: Food & Grocery Ordering Voice Agent
+- **JSON-based product catalog** with 30+ items across 4 categories (Groceries, Snacks, Prepared Food, Beverages)
+- **Intelligent recipe ordering** - "ingredients for pasta" adds multiple items automatically
+- **Complete cart management** - add, remove, update quantities, view cart with totals
+- **7 function tools** for search, recipe lookup, and cart operations
+- **Order persistence** to JSON files with unique order IDs and timestamps
+- **Friendly shopping assistant persona** - warm, helpful, knowledgeable
+- **Result**: E-commerce shopping agent with smart ingredient bundling and order tracking
+
 ## 🛠️ Technologies Used
 
 - **Python 3.10+** - Backend language
@@ -133,10 +144,12 @@ Then open `http://localhost:3000` in your browser.
 - **Natural lead capture** feels less like a form interrogation and more like a conversation
 - **Database integration** transforms agents from passive talkers into active systems that update records
 - **Security-first design** requires careful handling of verification without exposing sensitive data
+- **E-commerce cart management** requires stateful tracking and clear verbal confirmations for all operations
+- **Recipe intelligence** enables natural bundling of related items from simple user requests
 
 ## 🔮 Upcoming Days
 
-Days 7-10 will explore:
+Days 8-10 will explore:
 - Advanced conversation patterns
 - Context-aware responses
 - Emotion detection and adaptation

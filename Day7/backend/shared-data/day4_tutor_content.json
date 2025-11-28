@@ -1,0 +1,26 @@
+[
+    {
+        "id": "variables",
+        "title": "Variables",
+        "summary": "Variables are containers that store data values. They let you save information like numbers, text, or other values so you can reuse them later in your code. Think of them as labeled boxes where you can put things and retrieve them when needed. For example, 'age = 25' creates a variable called 'age' that stores the number 25.",
+        "sample_question": "What is a variable and why would you use one in a program?"
+    },
+    {
+        "id": "loops",
+        "title": "Loops",
+        "summary": "Loops allow you to repeat a block of code multiple times without writing it over and over. There are two main types: 'for loops' which repeat a specific number of times, and 'while loops' which repeat as long as a condition is true. For example, a for loop can print numbers 1 to 10, while a while loop can keep asking for input until the user enters 'quit'.",
+        "sample_question": "Explain the difference between a for loop and a while loop, and when you'd use each one."
+    },
+    {
+        "id": "functions",
+        "title": "Functions",
+        "summary": "Functions are reusable blocks of code that perform a specific task. They take inputs (called parameters or arguments), do something with them, and often return a result. Functions help organize code, avoid repetition, and make programs easier to understand. For example, a 'calculate_area(width, height)' function could multiply width by height and return the result.",
+        "sample_question": "What is a function and what are the benefits of using functions in your code?"
+    },
+    {
+        "id": "conditionals",
+        "title": "Conditionals",
+        "summary": "Conditionals (if/else statements) let your program make decisions based on conditions. They check if something is true or false, then execute different code accordingly. For example, 'if age >= 18' checks if someone is an adult, and you can run different code for adults vs. minors. You can chain multiple conditions using 'elif' (else if) and provide a fallback with 'else'.",
+        "sample_question": "How do if/else statements work and why are they important in programming?"
+    }
+]
