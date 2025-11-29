@@ -22,6 +22,7 @@ The entire project is built on a real-time, low-latency stack:
 | **Day 5** | Create a Razorpay SDR Voice Agent | ✅ COMPLETE | Built a professional SDR agent with FAQ pre-warming, keyword-based search, and natural lead capture with master database storage |
 | **Day 6** | Build a Fraud Alert Voice Agent for Banking | ✅ COMPLETE | Integrated SQLite database for fraud case management with secure verification via security questions and real-time status updates |
 | **Day 7** | Build a Food & Grocery Ordering Voice Agent | ✅ COMPLETE | Created comprehensive shopping assistant with 30+ item catalog, intelligent recipe-based ordering, cart management, and JSON order persistence |
+| **Day 8** | Build a D&D-Style Voice Game Master | ✅ COMPLETE | Interactive storytelling agent with bilingual support (English/Hindi), option-based gameplay, dice mechanics, and story continuity tracking |
 
 ## 📂 Repository Structure
 
@@ -34,6 +35,7 @@ AI-Voice-Agents---MurfAI-Challenge/
 ├── Day5/           # Razorpay SDR Agent (FAQ + Lead Capture)
 ├── Day6/           # Fraud Alert Agent (Database Integration)
 ├── Day7/           # Food & Grocery Ordering (E-commerce Cart)
+├── Day8/           # D&D Game Master (Interactive Storytelling + Bilingual)
 └── README.md       # This file
 ```
 
@@ -119,6 +121,16 @@ Then open `http://localhost:3000` in your browser.
 - **Friendly shopping assistant persona** - warm, helpful, knowledgeable
 - **Result**: E-commerce shopping agent with smart ingredient bundling and order tracking
 
+### Day 8: D&D-Style Voice Game Master
+- **Bilingual storytelling** - Complete adventures in English or Hindi with auto-language detection
+- **Interactive narrative** - GM describes vivid fantasy scenes in the realm of Eldoria
+- **Option-based gameplay** - GM presents 2-3 numbered choices instead of open-ended questions
+- **Story continuity tracking** - Remembers NPCs met, locations visited, items obtained, and key events
+- **Dice rolling mechanics** - d20 skill checks with interpreted results (critical success/failure)
+- **Auto-greeting system** - GM speaks first, asking for language preference
+- **3 specialized tools** - dice rolling, story event tracking, context retrieval
+- **Result**: Fantasy adventure Game Master with natural language choices and bilingual support
+
 ## 🛠️ Technologies Used
 
 - **Python 3.10+** - Backend language
@@ -146,6 +158,9 @@ Then open `http://localhost:3000` in your browser.
 - **Security-first design** requires careful handling of verification without exposing sensitive data
 - **E-commerce cart management** requires stateful tracking and clear verbal confirmations for all operations
 - **Recipe intelligence** enables natural bundling of related items from simple user requests
+- **Bilingual support** requires language-specific prompting and consistent language throughout the conversation
+- **Auto-greeting** improves UX by eliminating awkward silences and guiding users immediately
+- **Option-based interaction** makes voice agents more accessible by reducing cognitive load on users
 
 ## 🔮 Upcoming Days
 
