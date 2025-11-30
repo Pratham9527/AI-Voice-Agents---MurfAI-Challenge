@@ -23,6 +23,7 @@ The entire project is built on a real-time, low-latency stack:
 | **Day 6** | Build a Fraud Alert Voice Agent for Banking | ✅ COMPLETE | Integrated SQLite database for fraud case management with secure verification via security questions and real-time status updates |
 | **Day 7** | Build a Food & Grocery Ordering Voice Agent | ✅ COMPLETE | Created comprehensive shopping assistant with 30+ item catalog, intelligent recipe-based ordering, cart management, and JSON order persistence |
 | **Day 8** | Build a D&D-Style Voice Game Master | ✅ COMPLETE | Interactive storytelling agent with bilingual support (English/Hindi), option-based gameplay, dice mechanics, and story continuity tracking |
+| **Day 9** | Build an E-commerce Voice Shopping Assistant | ✅ COMPLETE | ACP-inspired architecture with 9 products across 3 categories, smart filtering, multi-item cart management, and order persistence to JSON |
 
 ## 📂 Repository Structure
 
@@ -36,6 +37,7 @@ AI-Voice-Agents---MurfAI-Challenge/
 ├── Day6/           # Fraud Alert Agent (Database Integration)
 ├── Day7/           # Food & Grocery Ordering (E-commerce Cart)
 ├── Day8/           # D&D Game Master (Interactive Storytelling + Bilingual)
+├── Day9/           # E-commerce Shopping (ACP Pattern + Multi-Category Catalog)
 └── README.md       # This file
 ```
 
@@ -131,6 +133,17 @@ Then open `http://localhost:3000` in your browser.
 - **3 specialized tools** - dice rolling, story event tracking, context retrieval
 - **Result**: Fantasy adventure Game Master with natural language choices and bilingual support
 
+### Day 9: E-commerce Voice Shopping Assistant
+- **ACP-inspired architecture** - Clean separation: conversation → commerce logic → persistence (following Agentic Commerce Protocol pattern)
+- **Product catalog** - 9 products across 3 categories (Clothing, Accessories, Home & Kitchen) with size/color variants
+- **Smart filtering** - Search by category, price range, color, and size with combined filter support
+- **Shopping cart management** - Add, view, remove, clear with real-time total calculations
+- **Multi-item orders** - Buy multiple products in a single transaction
+- **8 function tools** - browse_catalog, get_product_details, add_to_cart, view_cart, remove_from_cart, clear_cart, place_order, get_last_order
+- **Order persistence** - All orders saved to JSON with unique IDs, timestamps, and complete item details
+- **Friendly shopping assistant** - Enthusiastic persona that confirms actions and suggests products
+- **Result**: Full-featured e-commerce agent with structured commerce flow and order tracking
+
 ## 🛠️ Technologies Used
 
 - **Python 3.10+** - Backend language
@@ -161,15 +174,18 @@ Then open `http://localhost:3000` in your browser.
 - **Bilingual support** requires language-specific prompting and consistent language throughout the conversation
 - **Auto-greeting** improves UX by eliminating awkward silences and guiding users immediately
 - **Option-based interaction** makes voice agents more accessible by reducing cognitive load on users
+- **ACP pattern** provides a clean architecture for commerce: separating conversation, business logic, and data layers
+- **Multi-variant products** require careful state management to track size, color, and quantity selections
+- **Cart mutations** in Python need proper handling (use .clear() and .extend() instead of reassignment in class methods)
+- **Order ID generation** with timestamps ensures uniqueness without external dependencies
 
-## 🔮 Upcoming Days
+## 🔮 Day 10
 
-Days 8-10 will explore:
-- Advanced conversation patterns
-- Context-aware responses
-- Emotion detection and adaptation
-- Multi-modal interactions
-- Production deployment strategies
+The final day will focus on:
+- Advanced integration patterns
+- Production-ready deployment
+- Performance optimization
+- Real-world use case synthesis
 
 ## 📄 License
 
