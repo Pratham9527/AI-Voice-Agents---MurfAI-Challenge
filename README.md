@@ -24,6 +24,7 @@ The entire project is built on a real-time, low-latency stack:
 | **Day 7** | Build a Food & Grocery Ordering Voice Agent | ✅ COMPLETE | Created comprehensive shopping assistant with 30+ item catalog, intelligent recipe-based ordering, cart management, and JSON order persistence |
 | **Day 8** | Build a D&D-Style Voice Game Master | ✅ COMPLETE | Interactive storytelling agent with bilingual support (English/Hindi), option-based gameplay, dice mechanics, and story continuity tracking |
 | **Day 9** | Build an E-commerce Voice Shopping Assistant | ✅ COMPLETE | ACP-inspired architecture with 9 products across 3 categories, smart filtering, multi-item cart management, and order persistence to JSON |
+| **Day 10** | Build a Voice Improv Battle Game Show | ✅ COMPLETE | Interactive improv game with 12 unique scenarios, varied host reactions (positive/critical/mixed/surprised), automatic scene detection, and game state management |
 
 ## 📂 Repository Structure
 
@@ -38,6 +39,7 @@ AI-Voice-Agents---MurfAI-Challenge/
 ├── Day7/           # Food & Grocery Ordering (E-commerce Cart)
 ├── Day8/           # D&D Game Master (Interactive Storytelling + Bilingual)
 ├── Day9/           # E-commerce Shopping (ACP Pattern + Multi-Category Catalog)
+├── Day10/          # Improv Battle (Game Show Host + Scenario System)
 └── README.md       # This file
 ```
 
@@ -178,14 +180,24 @@ Then open `http://localhost:3000` in your browser.
 - **Multi-variant products** require careful state management to track size, color, and quantity selections
 - **Cart mutations** in Python need proper handling (use .clear() and .extend() instead of reassignment in class methods)
 - **Order ID generation** with timestamps ensures uniqueness without external dependencies
+- **Game show persona** requires high energy and varied reactions to feel authentic and engaging
+- **Scene detection** in voice requires multiple signals: explicit phrases, natural indicators, and turn counting
+- **Improv feedback** should balance encouragement with honest critique for realistic coaching
+- **Random scenario pools** (12 options for 3 rounds) provide replayability without repetition
+- **Entertainment agents** benefit from concise, punchy responses to maintain energy and pacing
+- **State machines** (intro → awaiting → reacting → done) cleanly organize multi-phase conversations
 
-## 🔮 Day 10
-
-The final day will focus on:
-- Advanced integration patterns
-- Production-ready deployment
-- Performance optimization
-- Real-world use case synthesis
+### Day 10: Voice Improv Battle
+- **Interactive game show** - AI host presents 3 improv scenarios per game
+- **12 unique scenarios** - Time travel, cursed objects, portal lattes, zombie yoga, and more
+- **Varied host reactions** - Realistic feedback mixing positive, critical, mixed, and surprised responses
+- **Smart scene detection** - Recognizes "end scene" phrases, natural completion, and automatic timing (3+ turns)
+- **Game state management** - Tracks rounds, scenarios used, player performance, and conversation phase
+- **Dynamic host persona** - High-energy, witty game show host with constructive critique
+- **Closing summary** - Analyzes player's improv style and highlights memorable moments
+- **Random scenario selection** - Never repeats scenarios within a game session
+- **Early exit support** - Graceful handling of "stop game" commands
+- **Result**: Entertainment-focused improv coach that tests creativity and provides real feedback
 
 ## 📄 License
 
